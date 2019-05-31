@@ -1,0 +1,20 @@
+{% load static %}
+
+{% block content %}
+  <h1>Faculty Details</h1>
+
+  <p><strong>Name:</strong> {{ faculty.name }}</p>
+  <p><strong>Department:</strong> {{ faculty.department }}</p>
+  <p><strong>Department:</strong> {{ faculty.rank }}</p>
+  <p><strong>Courses:</strong></p>
+
+    {% for course in faculty.courses.all %}
+      <li>
+           {{ course.course_name }}
+
+      </li>
+
+    {% endfor %}
+
+
+{% endblock %}

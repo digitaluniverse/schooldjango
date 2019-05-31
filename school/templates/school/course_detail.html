@@ -1,0 +1,12 @@
+{% load static %}
+
+{% block content %}
+  <h1>{{ course.course_name }}</h1>
+
+  <p><strong>Course Name:</strong> {{ course.course_name }}</p>
+  <p><strong>Course id:</strong> {{ course.course_id }}</p>
+  <p><strong>Start Date:</strong> {{ course.start_date }}</p>
+  <p><strong>End Date:</strong> {{ course.end_date }}</p>
+  <p><strong>Faculty:</strong> {{ course.faculty }}</p>
+
+{% endblock %}

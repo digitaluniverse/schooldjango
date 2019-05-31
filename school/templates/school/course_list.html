@@ -1,0 +1,16 @@
+{% load static %}
+
+{% block content %}
+  <h1>List of Courses</h1>
+  {% if course_list %}
+  <ul>
+    {% for course in course_list %}
+      <li>
+        <a href="{{ course.get_absolute_url }}">{{ course.course_id }}</a> ({{course.course_name}})
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no Courses.</p>
+  {% endif %}       
+{% endblock %}
